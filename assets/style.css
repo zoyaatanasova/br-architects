@@ -1,0 +1,511 @@
+:root {
+	--grid-gap: 8px;
+	--grid-col-width: calc(100% / 12);
+}
+
+
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top:  80px;
+}
+
+body {
+	margin: 0;
+	font-size: 15px;
+	line-height: 1.5;
+	color: #000;
+}
+
+.shell {
+	max-width: 1170px;
+	margin: auto;
+	padding: 0 16px;
+}
+
+img	{
+	max-width: 100%;
+	height: auto;
+}
+
+.header	{
+	position: fixed;
+	top: 0;
+	background-color: #fff;
+	width: 100%;
+	left: 0;
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+	justify-content: space-between;
+	z-index: 50;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+	padding: 8px 20px;
+	letter-spacing: 4px;
+}
+
+.logo {
+	font-size: 20px;
+	letter-spacing: 0.02em;
+	text-decoration: none;
+	color: inherit;
+	display: block;
+	padding: 16px 20px;
+}
+
+.logo span {
+	font-size: 120%;
+	text-transform: uppercase;
+	padding-right: 8px;
+	font-weight: bold;
+}
+
+.logo--large {
+	font-size: 30px;
+	color: #fff;
+}
+
+.logo--large span {
+	display: inline-block;
+	vertical-align: baseline;
+	padding: 12px 20px;
+	margin-right: 20px;
+	background-color: rgba(0, 0, 0, 0.8);
+}
+
+.nav ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+.nav li {
+	display: inline-block;
+	vertical-align: middle;
+}
+.nav li a {
+	text-decoration: none;
+	color: inherit;
+	padding: 12px 20px;
+	display: block;	
+	transition: background-color 0.7s ease-in-out;
+}
+.nav li a:hover {
+	background-color: #ccc;
+}
+
+.intro {
+	position: relative;
+	margin-bottom: 48px;
+}
+
+.intro img {
+	width: 100%;
+	display: block;
+	height: auto;
+}
+
+.intro .logo {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform:  translate(-50%, -50%);
+}
+
+.section__header {
+	padding: 16px 0;
+	border-bottom: 1px solid #ccc;
+	margin-bottom: 48px;
+}
+
+.section__header h2:first-letter {
+	text-transform: uppercase;
+}
+
+.section__header h2 {
+	font-weight: normal;
+}
+
+.row {
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: calc(-1 * var(--grid-gap));
+	margin-right: calc(-1 * var(--grid-gap));
+}
+
+[class*='col-'] {
+	flex-grow: 0;
+	flex-shrink: 0;
+	padding-left: var(--grid-gap);
+	padding-right: var(--grid-gap);
+}
+
+/* Desktop */
+@media only screen and (min-width: 1340px) {
+	.col-xl-1 {
+		flex-basis: calc(var(--grid-col-width) * 1) ;
+	}
+
+	.col-xl-2 {
+		flex-basis: calc(var(--grid-col-width) * 2) ;
+	}
+
+	.col-xl-3 {
+		flex-basis: calc(var(--grid-col-width) * 3) ;
+	}
+
+	.col-xl-4 {
+		flex-basis: calc(var(--grid-col-width) * 4) ;
+	}
+
+	.col-xl-5 {
+		flex-basis: calc(var(--grid-col-width) * 5) ;
+	}
+
+	.col-xl-6 {
+		flex-basis: calc(var(--grid-col-width) * 6) ;
+	}
+
+	.col-xl-7 {
+		flex-basis: calc(var(--grid-col-width) * 7) ;
+	}
+
+	.col-xl-8 {
+		flex-basis: calc(var(--grid-col-width) * 8) ;
+	}
+
+	.col-xl-9 {
+		flex-basis: calc(var(--grid-col-width) * 9) ;
+	}
+
+	.col-xl-10 {
+		flex-basis: calc(var(--grid-col-width) * 10) ;
+	}
+
+	.col-xl-11 {
+		flex-basis: calc(var(--grid-col-width) * 11) ;
+	}
+
+	.col-xl-12 {
+		flex-basis: calc(var(--grid-col-width) * 12) ;
+	}
+}
+
+/*Laptop*/
+
+@media only screen and (min-width: 1280px) and (max-width: 1339px) {
+ 	.col-lg-1 {
+		flex-basis: calc(var(--grid-col-width) * 1) ;
+	}
+
+	.col-lg-2 {
+		flex-basis: calc(var(--grid-col-width) * 2) ;
+	}
+
+	.col-lg-3 {
+		flex-basis: calc(var(--grid-col-width) * 3) ;
+	}
+
+	.col-lg-4 {
+		flex-basis: calc(var(--grid-col-width) * 4) ;
+	}
+
+	.col-lg-5 {
+		flex-basis: calc(var(--grid-col-width) * 5) ;
+	}
+
+	.col-lg-6 {
+		flex-basis: calc(var(--grid-col-width) * 6) ;
+	}
+
+	.col-lg-7 {
+		flex-basis: calc(var(--grid-col-width) * 7) ;
+	}
+
+	.col-lg-8 {
+		flex-basis: calc(var(--grid-col-width) * 8) ;
+	}
+
+	.col-lg-9 {
+		flex-basis: calc(var(--grid-col-width) * 9) ;
+	}
+
+	.col-lg-10 {
+		flex-basis: calc(var(--grid-col-width) * 10) ;
+	}
+
+	.col-lg-11 {
+		flex-basis: calc(var(--grid-col-width) * 11) ;
+	}
+
+	.col-lg-12 {
+		flex-basis: calc(var(--grid-col-width) * 12) ;
+	}
+}
+
+/*Tablet Landscape*/
+
+@media only screen and (min-width: 1024px) and (max-width: 1279px) {
+ 	.col-md-1 {
+		flex-basis: calc(var(--grid-col-width) * 1) ;
+	}
+
+	.col-md-2 {
+		flex-basis: calc(var(--grid-col-width) * 2) ;
+	}
+
+	.col-md-3 {
+		flex-basis: calc(var(--grid-col-width) * 3) ;
+	}
+
+	.col-md-4 {
+		flex-basis: calc(var(--grid-col-width) * 4) ;
+	}
+
+	.col-md-5 {
+		flex-basis: calc(var(--grid-col-width) * 5) ;
+	}
+
+	.col-md-6 {
+		flex-basis: calc(var(--grid-col-width) * 6) ;
+	}
+
+	.col-md-7 {
+		flex-basis: calc(var(--grid-col-width) * 7) ;
+	}
+
+	.col-md-8 {
+		flex-basis: calc(var(--grid-col-width) * 8) ;
+	}
+
+	.col-md-9 {
+		flex-basis: calc(var(--grid-col-width) * 9) ;
+	}
+
+	.col-md-10 {
+		flex-basis: calc(var(--grid-col-width) * 10) ;
+	}
+
+	.col-md-11 {
+		flex-basis: calc(var(--grid-col-width) * 11) ;
+	}
+
+	.col-md-12 {
+		flex-basis: calc(var(--grid-col-width) * 12) ;
+	}
+}
+
+/*Tablet Portrait*/
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+ 	.col-sm-1 {
+		flex-basis: calc(var(--grid-col-width) * 1) ;
+	}
+
+	.col-sm-2 {
+		flex-basis: calc(var(--grid-col-width) * 2) ;
+	}
+
+	.col-sm-3 {
+		flex-basis: calc(var(--grid-col-width) * 3) ;
+	}
+
+	.col-sm-4 {
+		flex-basis: calc(var(--grid-col-width) * 4) ;
+	}
+
+	.col-sm-5 {
+		flex-basis: calc(var(--grid-col-width) * 5) ;
+	}
+
+	.col-sm-6 {
+		flex-basis: calc(var(--grid-col-width) * 6) ;
+	}
+
+	.col-sm-7 {
+		flex-basis: calc(var(--grid-col-width) * 7) ;
+	}
+
+	.col-sm-8 {
+		flex-basis: calc(var(--grid-col-width) * 8) ;
+	}
+
+	.col-sm-9 {
+		flex-basis: calc(var(--grid-col-width) * 9) ;
+	}
+
+	.col-sm-10 {
+		flex-basis: calc(var(--grid-col-width) * 10) ;
+	}
+
+	.col-sm-11 {
+		flex-basis: calc(var(--grid-col-width) * 11) ;
+	}
+
+	.col-sm-12 {
+		flex-basis: calc(var(--grid-col-width) * 12) ;
+	}
+}
+
+/*Mobile Phone*/
+
+@media only screen and (max-width: 767px) {
+ 	.col-xs-1 {
+		flex-basis: calc(var(--grid-col-width) * 1) ;
+	}
+
+	.col-xs-2 {
+		flex-basis: calc(var(--grid-col-width) * 2) ;
+	}
+
+	.col-xs-3 {
+		flex-basis: calc(var(--grid-col-width) * 3) ;
+	}
+
+	.col-xs-4 {
+		flex-basis: calc(var(--grid-col-width) * 4) ;
+	}
+
+	.col-xs-5 {
+		flex-basis: calc(var(--grid-col-width) * 5) ;
+	}
+
+	.col-xs-6 {
+		flex-basis: calc(var(--grid-col-width) * 6) ;
+	}
+
+	.col-xs-7 {
+		flex-basis: calc(var(--grid-col-width) * 7) ;
+	}
+
+	.col-xs-8 {
+		flex-basis: calc(var(--grid-col-width) * 8) ;
+	}
+
+	.col-xs-9 {
+		flex-basis: calc(var(--grid-col-width) * 9) ;
+	}
+
+	.col-xs-10 {
+		flex-basis: calc(var(--grid-col-width) * 10) ;
+	}
+
+	.col-xs-11 {
+		flex-basis: calc(var(--grid-col-width) * 11) ;
+	}
+
+	.col-xs-12 {
+		flex-basis: calc(var(--grid-col-width) * 12) ;
+	}
+ }
+
+
+.project {
+	position: relative;
+	margin-bottom: 16px;
+}
+.project img {
+	width: 100%;
+	height: auto;
+	display: block;
+}
+
+.project strong {
+	position: absolute;
+	top: 0;
+	left: 0;
+	color: #fff;
+	background-color: #000;
+	padding: 8px 16px;
+	font-weight: normal;
+}
+
+.section__content {
+	padding-bottom: 48px;
+}
+
+.memeber img {
+	display: block;
+	height: auto;
+	width: 100%;
+}
+
+.memeber h2 {
+	font-weight: normal;
+	margin: 12 0;	
+}
+
+.member p {
+	margin: 12 0;
+}
+
+.member p:first-of-type {
+	color: grey;
+}
+
+.button {
+	display: block;
+	text-decoration: none;
+	text-align: center;
+	padding: 8px 16px;
+	cursor: pointer;
+	border: none;
+}
+
+.button:hover {
+	background-color: #ccc;
+}
+
+.button--primary {
+	background-color: rgba(0, 0, 0, 0.1);
+	color: black;
+}
+
+.button--secondary {
+	background-color: black;
+	color: white;
+	font-size: 15px;
+	margin: 18px 0;
+}
+
+.button--secondary:hover {
+	background-color: #ccc;
+	color: #000;
+}
+
+.form__field {
+	padding: 8px 0;
+	margin: 8px 0;
+	
+}
+
+.form__field input {
+	font-size: 16px;
+	padding: 10px;
+	width: 100%;
+}
+
+.form__field input:focused {
+	border: 1px solid black;
+}
+
+.section img {
+	margin-bottom: 16px;
+}
+
+form {
+	margin-bottom: 48px;
+}
+.footer {
+	background-color: #000;
+	font-size: 16px;
+	color: #fff;
+	text-align: center;
+	padding: 16px;
+}
+.footer a {
+	color: white;
+}
+
